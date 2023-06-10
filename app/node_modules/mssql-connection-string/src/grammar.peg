@@ -1,0 +1,25 @@
+start
+  = (step)+
+  
+step
+  = key:keytoken [ ]* '=' value:valuetoken ';' {return [key, value]}
+
+valuetoken 
+  = [ ]* t:(doublequoted / singlequoted / plainvalue) [ ]* {return t.join('')}
+
+doublequoted
+  = ('"' enc:[^"]+ '"' {return enc})
+
+singlequoted
+  = ("'" enc:[^']+ "'" {return enc})
+  
+plainvalue
+  = (text:[^;=]+ {return [text.join('').trim()]})
+
+keytoken
+  = key:(('==' {return '='}) / [^=])+ {return key.join('').trim()}
+
+  /*
+  npm install --global pegjs
+  pegjs --format commonjs --output grammar.peg.js ./grammar.peg
+  */

@@ -1,0 +1,19 @@
+{
+  "name": "webapp",
+  "version": "1.0.0",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "bootstrap4-toggle": "^3.6.1",
+    "dateformat": "^3.0.3",
+    "express": "^4.14.0",
+    "fs": "0.0.1-security",
+    "jsdom": "^16.2.1",
+    "mssql": "^6.0.1",
+    "mssql-connection-string": "^0.3.2",
+    "parsehub": "^0.1.1",
+    "request": "latest"
+  },
+  "devDependencies": {
+    "babel-polyfill": "^6.26.0"
+  }
+}

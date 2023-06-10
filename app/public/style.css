@@ -1,0 +1,326 @@
+body {
+    padding: 0;
+    margin: 0;
+    min-width: 1050px;
+
+    background-color: #efefef;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+
+    background-color: #164349;
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+}
+
+header .container {
+    width: 1010px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logoLink {
+    margin: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Gloria Hallelujah', cursive;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header .logo {
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+main .block {
+    padding: 20px;
+    margin: 10px;
+
+    text-align: justify;
+
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0px 2px rgba(0, 0, 0, .2);
+}
+
+main .block h1 {
+    margin: 0 0 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+main .block h4 {
+    margin: 0;
+    font-size: 12px;
+    text-align: center;
+    font-weight: normal;
+}
+
+#userMenu {
+    padding: 10px 10px 10px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+
+    outline: none;
+}
+
+#userMenu:hover, #userMenu:focus, #userMenu:active {
+    background-color: #14363c;
+}
+
+.sub-menu
+{
+    padding: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 50px;
+    list-style-type: none;
+    z-index: 1;
+}
+
+#userMenu:focus ~ .sub-menu,
+#userMenu:active ~ .sub-menu,
+.sub-menu:hover
+{
+    visibility: visible;
+    top: 43px;
+    transition: visibility .2s ease-out, top .2s ease-out;
+
+    width: 160px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: .5px solid rgba(20, 54, 60, 0.2);
+    box-shadow: 0 0px 4px rgba(0, 0, 0, .1);
+}
+
+.sub-menu li {
+    margin: 5px 0;
+    padding: 5px 10px;
+    height: 22px;
+}
+
+.sub-menu li:hover {
+    background-color: rgba(20, 54, 60, 0.1);
+}
+
+.sub-menu hr {
+    margin: 0 0 0 5%;
+    width: 90%;
+}
+
+.sub-menu li a {
+    display: block;
+    width: 100%;
+    color: #14363c;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 10px 0 0;
+    padding: 0;
+}
+
+nav ul hr {
+    margin: 5px 0;
+    opacity: 0.4;
+}
+
+nav li {
+    padding: 3px 10px;
+}
+
+nav li:hover {
+    background-color: rgba(20, 54, 60, 0.1);
+}
+
+nav li a {
+    width: 100%;
+    color: #14363c;
+    font-size: 14px;
+    line-height: 22px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav li a span {
+    margin-top: 2px;
+}
+
+nav .navIcon {
+    margin-right: 8px;
+    opacity: 0.5;
+    line-height: 22px;
+    font-size: 22px;
+}
+
+nav li:hover .navIcon {
+    opacity: 0.8;
+}
+
+#editProfile {
+    font-size: 13px;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+#editProfile a {
+    color: inherit;
+}
+
+#editProfile:hover {
+    opacity: 0.7;
+}
+
+#userPhoto {
+    margin-right: 10px;
+    width: 120px;
+    border: 1px solid black;
+}
+
+div #userPhoto {
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #14363c;
+}
+
+.personalInfo span {
+    font-size: 14px;
+}
+
+#autoForm {
+    margin-top: 10px;
+}
+
+#autosTable th {
+    border: none;
+    border-left: 5px solid #fff;
+    border-right: 5px solid #fff;
+    height: 30px;
+    color: #14363c;
+    background-color: rgba(20, 54, 60, 0.1);
+    text-align: center;
+}
+
+#autosTable td {
+    border: none;
+    border-left: 5px solid #fff;
+    border-right: 5px solid #fff;
+    height: 30px;
+    color: #14363c;
+    background-color: rgba(200, 200, 200, 0.1);
+    text-align: center;
+}
+
+#autosTable tr:hover .deleteAuto {
+    display: block;
+}
+
+#autosTable .deleteAuto {
+    display: none;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+#autosTable .deleteAuto:hover {
+    opacity: 0.8;
+}
+
+.form-group {
+    display: none;
+    position: absolute;
+    height: 30px;
+    width: 122px;
+
+    background-color: #000;
+    color: #a7a7a7;
+    font-size: 13px;
+    line-height: 30px;
+    text-align: center;
+    opacity: 0.8;
+
+    top: 202px;
+    cursor: pointer;
+}
+
+.form-group label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.form-group input[type=file]{
+    display: none;
+}
+
+#userPhoto:hover~.form-group, .form-group:hover {
+    display: block;
+}
+
+.form-group:hover {
+    color: #fff;
+}
+
+rect {
+    fill: #1A4F55;
+    cursor: pointer;
+    outline: none;
+    stroke-width: 1;
+    stroke: rgb(0,0,0)
+}
+
+rect:hover, rect:focus {
+    fill: #14363c;
+}
+
+.parkSchema rect {
+    fill: #1A4F55;
+    cursor: default;
+}
+
+.parkSchema rect:hover, .parkSchema rect:focus {
+    fill: #1A4F55;
+    stroke-width: 1;
+    stroke: rgb(0,0,0)
+}
+
+.reservationInfo a {
+    color: #14363c
+}
+
+.reservationInfo a:hover {
+    text-decoration: underline;
+}
